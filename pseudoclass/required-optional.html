@@ -1,0 +1,81 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:required &amp; :optional Psuedo Classes</title>
+
+        <meta name="author" content="Jigar Jain">
+
+        <link href="/css/style.css" rel="stylesheet" />
+
+        <style type="text/css">
+            /** Basic styling. Look at the bottom for magic */
+            body {
+                min-height: 100vh;
+                background-color: #E0E0E0;
+            }
+
+            form {
+                margin: 0 auto;
+                width: 80%;
+                text-align: center;
+            }
+
+            label {
+                display: block;
+                margin: 20px
+            }
+
+            input {
+                display: block;
+                margin: 0 auto;
+                padding: 10px 5px;
+                width: 250px;
+            }
+
+            input[type="submit"] {
+                color: #fff;
+                background-color: #4CAF50;
+                border: none;
+            }
+
+            .state {
+                font-weight: bold;
+                font-size: 18px;
+                color: #b71c1c;
+            }
+
+            input:required ~ .state {
+                content: "required";
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="text-center">:required &amp; :optional Pseudo Class</h1>
+        </header>
+
+        <div class="container">
+            <form>
+                <label>
+                    <input type="text" placeholder="Enter Name" required>
+                    <span class="state"></span>
+                </label>
+                <label>
+                    <input type="email" placeholder="Enter Email" required>
+                    <span class="state"></span>
+                </label>
+                <label>
+                    <input type="number" placeholder="Enter Phone Number">
+                    <span class="state"></span>
+                </label>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

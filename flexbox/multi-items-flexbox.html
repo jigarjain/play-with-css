@@ -1,0 +1,111 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Equal width/height items | Flex Method</title>
+
+        <meta name="author" content="Jigar Jain">
+
+        <link href="/css/style.css" rel="stylesheet" />
+
+        <style type="text/css">
+            /** Basic styling. Look at the bottom for magic */
+            body {
+                min-height: 100vh;
+                color: #fff;
+                background-color: #E91E63;
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            .container {
+                margin: 100px auto;
+                padding: 20px;
+                width: 80%;
+                background-color: #FFF;
+            }
+
+            .center-me {
+                padding: 10px;
+                font-weight: bold;
+                color: #E91E63;
+                text-transform: uppercase;
+                border: 1px solid #E91E63;
+                background-color: #CDDC39;
+            }
+
+            /** Magic happens here */
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                /*flex-direction: row;
+                justify-content: space-around;*/
+            }
+
+            .center-me {
+                flex: 1;
+                min-width: 20%;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="text-center">Aligning n-items using flex</h1>
+        </header>
+
+        <div class="container">
+            <div class="center-me tall">
+                Item 1
+            </div>
+            <div class="center-me">
+                Item 2
+            </div>
+            <div class="center-me slim">
+                Item 3
+            </div>
+            <div class="center-me tall">
+                Item 4
+            </div>
+            <div class="center-me">
+                Item 5
+            </div>
+            <div class="center-me">
+                Item 6
+            </div>
+            <div class="center-me slim">
+                Item 7
+            </div>
+            <!-- <div class="center-me tall">
+                Item 8
+            </div>
+            <div class="center-me">
+                Item 9
+            </div>
+            <div class="center-me slim">
+                Item 10
+            </div>
+            <div class="center-me">
+                Item 11
+            </div>
+            <div class="center-me slim">
+                Item 12
+            </div>
+            <div class="center-me tall">
+                Item 13
+            </div>
+            <div class="center-me">
+                Item 14
+            </div>
+            <div class="center-me slim">
+                Item 15
+            </div> -->
+        </div>
+    </body>
+</html>

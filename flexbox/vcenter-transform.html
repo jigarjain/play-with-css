@@ -1,0 +1,62 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vertical Centering | Traditional Method</title>
+
+        <meta name="author" content="Jigar Jain">
+
+        <link href="/css/style.css" rel="stylesheet" />
+
+        <style type="text/css">
+            /** Basic styling. Look at the bottom for magic */
+
+            body {
+                min-height: 100vh;
+                color: #fff;
+                background-color: #87CEEF;
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            .container {
+                margin: 100px auto;
+                width: 500px;
+                height: 300px;
+                background-color: #FFF;
+            }
+
+            .center-me {
+                margin: 0 auto;
+                width: 80%;
+                font-weight: bold;
+                color: #87CEEF;
+                text-transform: uppercase;
+            }
+
+            /** Magic: Vertical centering based on traditional method **/
+            .center-me {
+                height: 50px; /** height is required as absolute value **/
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="text-center">Vertical Centering using 'transform'</h1>
+        </header>
+
+        <div class="container">
+            <div class="center-me text-center">
+                I am vertically centered
+            </div>
+        </div>
+    </body>
+</html>

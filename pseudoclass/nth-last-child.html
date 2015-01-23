@@ -1,0 +1,69 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>:nth-last-child() with content &amp; ::after Psuedo Classes</title>
+
+        <meta name="author" content="Jigar Jain">
+
+        <link href="/css/style.css" rel="stylesheet" />
+
+        <style type="text/css">
+            /** Basic styling. Look at the bottom for magic */
+            body {
+                min-height: 100vh;
+                color: #fff;
+                background-color: #EC407A;
+            }
+
+            .container {
+                margin: 150px;
+                text-align: center;
+                font-size: 30px;
+            }
+
+            ul {
+                display: inline;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            ul li {
+                display: inline;
+            }
+
+            ul li::after {
+                content: ", ";
+            }
+
+            ul li:nth-last-child(2)::after {
+                content: " & ";
+            }
+
+            ul li:last-child::after {
+                content: "";
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="text-center">:required &amp; :optional Pseudo Class</h1>
+        </header>
+
+        <div class="container">
+            I Love
+            <ul>
+                <li>9gag</li>
+                <li>Quora</li>
+                <li>Batman</li>
+                <li>Food</li>
+            </ul>
+        </div>
+    </body>
+</html>
