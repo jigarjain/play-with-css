@@ -4,12 +4,40 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Holy Grail layout | Float Method</title>
+        <title>Holy Grail layout | Table Method</title>
 
-        <meta name="description" content="Solving the Holy Grail layout problem with float css property">
+        <meta name="description" content="Solving the Holy Grail layout problem with display Table property">
         <meta name="author" content="Jigar Jain">
 
-        <link href="/flexbox/css/holygrailTable.css" rel="stylesheet" />
+        <link href="/css/style.css" rel="stylesheet" />
+
+        <style type="text/css">
+            body {
+                color: #000;
+                background-color: #FFF9C4;
+            }
+
+            /** Table based HolyGrail Layout **/
+            @media (min-width: 768px) {
+                main {
+                    display: table;
+                    table-layout: fixed;
+                }
+
+                .sidebar, .content {
+                    display: table-cell;
+                }
+
+                .sidebar {
+                    width: 250px;
+                }
+            }
+
+            /** Other styles */
+            .sidebar, .content {
+                border: 1px solid red;
+            }
+        </style>
     </head>
 
     <body>

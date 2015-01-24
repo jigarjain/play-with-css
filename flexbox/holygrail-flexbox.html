@@ -9,7 +9,42 @@
         <meta name="description" content="Solving the Holy Grail layout problem with flexbox">
         <meta name="author" content="Jigar Jain">
 
-        <link href="/flexbox/css/holygrailFlexbox.css" rel="stylesheet" />
+        <link href="/css/style.css" rel="stylesheet" />
+        <style type="text/css">
+            body {
+                background-color: #B3E5FC;
+            }
+            .holygrail-flexbox {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 100vh;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                flex: 1 0 auto;
+            }
+
+            .sidebar-left {
+                order: -1;
+            }
+
+            @media (min-width: 768px) {
+                main {
+                    flex-direction: row;
+                }
+                .sidebar {
+                    width: 250px;
+                }
+            }
+
+            /** Other Styles */
+            .sidebar, .content {
+                border: 1px solid #0D47A1;
+            }
+        </style>
     </head>
 
     <body>
